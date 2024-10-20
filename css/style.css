@@ -1,0 +1,73 @@
+body{
+    position: relative;
+    overflow-x: hidden;
+}
+
+#header{
+    width: 100%;
+    background-color: rgba(250, 250,250,0.3);
+    position: fixed;
+    top: 0;
+    height: 70px;
+    z-index: 999;
+}
+#header .inner { 
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#header .logo{
+    background: url(../img/logo.svg) no-repeat left center; 
+    font-size: 0;
+    color: transparent;
+    width: 60px;
+    height: 100%;
+}
+#header .menuWrap{  
+    display: flex;
+    gap: 1vw;
+
+}
+#header .menuWrap li a{
+ padding: 10px 15px;
+ border-radius: 5px;
+ 
+}
+
+#header .menuWrap li a:hover{
+ color: #ffffff;
+ background-color: #FF9D00;
+ transition: all .2s ease-in-out;
+}
+
+.section01{
+    width: 100vw;
+    height: 900px;
+}
+
+/* background object 관련 */
+body svg{
+    position: absolute;
+    top: 0;
+}
+#blobSvg1{
+    top: -75%;
+    width: 100vw;
+    right: -45%;
+}
+
+#blobSvg2{
+    top: -40%;
+    width: 70vw;
+    right: -30%;
+}
+
+#blobSvg3{
+    top: -40%;
+    width: 60vw;
+    right: -35%;
+    opacity: 0.3;
+}

@@ -1,6 +1,7 @@
 body{
     position: relative;
     overflow-x: hidden;
+    font-family: 'NanumSquareRound',sans-serif;
 }
 
 #header{
@@ -42,12 +43,41 @@ body{
  background-color: #FF9D00;
  transition: all .2s ease-in-out;
 }
-
-.section01{
+.section{
     width: 100vw;
-    height: 900px;
+    height: 100vh;
 }
 
+.inner{
+    width: 80%;
+    margin: 0 auto;
+}
+
+#footer{
+    width: 100vw;
+    height: 30vh;
+}
+
+/* total background style */
+/* .section01{
+    background-image: url(../img/section01_bg.svg);
+    background-repeat: no-repeat;
+    background-position: top -60vh right -20vw;
+    background-size: 75vw;
+} */
+
+body{
+    background-image: url(../img/section01_bg.svg),
+    url(../img/section02_bg.svg),
+    url(../img/section03_bg.svg),
+    url(../img/section04_bg.svg);
+    background-repeat: no-repeat;
+    background-position: top -60vh right -25vw,
+    top 50vh left -50vw,
+    top 189vh right -8vw,
+    top 343vh right -40vw;
+    background-size: 80vw,65vw,110vw,60vw
+}
 
 /* background object 관련 */
 body svg{

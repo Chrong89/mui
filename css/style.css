@@ -1,8 +1,18 @@
+h1,h2,p,.discription,.title,.menuWrap a{
+    color: #c5d1d8;
+    background-color: #c5d1d8cc;
+    border-radius: 5px;
+    width: max-content;
+    margin: 5px;
+}
+
 body{
     position: relative;
     overflow-x: hidden;
     font-family: 'NanumSquareRound',sans-serif;
 }
+
+/* header */
 
 #header{
     width: 100%;
@@ -22,6 +32,7 @@ body{
 }
 #header .logo{
     background: url(../img/logo.svg) no-repeat left center; 
+    background-color: #0273b4dd;
     font-size: 0;
     color: transparent;
     width: 60px;
@@ -43,6 +54,9 @@ body{
  background-color: #FF9D00;
  transition: all .2s ease-in-out;
 }
+
+/* section 공통 */
+
 .section{
     width: 100vw;
     height: 100vh;
@@ -51,7 +65,22 @@ body{
 .inner{
     width: 80%;
     margin: 0 auto;
+    height: 100%;
+    background-color: #c6eaff23;
 }
+
+/* section01 */
+.section01 .inner{
+    display: grid;
+    align-items: center;
+}
+
+ h1{
+   font-size: 4vw; 
+ }
+
+
+/* footer */
 
 #footer{
     width: 100vw;

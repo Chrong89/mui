@@ -63,46 +63,46 @@ $(document).ready(function () {
   );
 
   // scroll 이벤트 처리
-  $(window).on(
-    "scroll",
-    _.throttle(function () {
-      if (isScrollingByWheel) return; // wheel 이벤트 중이면 scroll 이벤트 실행 안 함
+  // $(window).on(
+  //   "scroll",
+  //   _.throttle(function () {
+  //     if (isScrollingByWheel) return; // wheel 이벤트 중이면 scroll 이벤트 실행 안 함
 
-      const pageScrollTop = $(window).scrollTop();
-      const windowHeight = $(window).height();
+  //     const pageScrollTop = $(window).scrollTop();
+  //     const windowHeight = $(window).height();
 
-      // currentSection을 각 섹션의 50% 지점을 기준으로 업데이트
-      sections.each(function (index) {
-        const sectionTop = $(this).offset().top;
-        const sectionHeight = $(this).outerHeight();
-        const sectionMidPoint = sectionTop + sectionHeight / 2;
+  //     // currentSection을 각 섹션의 50% 지점을 기준으로 업데이트
+  //     sections.each(function (index) {
+  //       const sectionTop = $(this).offset().top;
+  //       const sectionHeight = $(this).outerHeight();
+  //       const sectionMidPoint = sectionTop + sectionHeight / 2;
 
-        if (pageScrollTop >= sectionMidPoint - windowHeight / 2) {
-          currentSection = index;
-        }
-      });
+  //       if (pageScrollTop >= sectionMidPoint - windowHeight / 2) {
+  //         currentSection = index;
+  //       }
+  //     });
 
-      // Footer로 스크롤 시 currentSection 업데이트
-      if (pageScrollTop >= footer.offset().top) {
-        currentSection = totalSections - 1;
-      }
+  //     // Footer로 스크롤 시 currentSection 업데이트
+  //     if (pageScrollTop >= footer.offset().top) {
+  //       currentSection = totalSections - 1;
+  //     }
 
-      // 헤더 로고 크기 조절
-      if (pageScrollTop > 500) {
-        headerLogo.stop(true, true).animate(
-          {
-            width: "190px",
-          },
-          300
-        );
-      } else {
-        headerLogo.stop(true, true).animate(
-          {
-            width: "60px",
-          },
-          300
-        );
-      }
-    }, 300)
-  );
+  //     // 헤더 로고 크기 조절
+  //     if (pageScrollTop > 500) {
+  //       headerLogo.stop(true, true).animate(
+  //         {
+  //           width: "190px",
+  //         },
+  //         300
+  //       );
+  //     } else {
+  //       headerLogo.stop(true, true).animate(
+  //         {
+  //           width: "60px",
+  //         },
+  //         300
+  //       );
+  //     }
+  //   }, 300)
+  // );
 });

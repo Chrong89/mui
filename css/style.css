@@ -1,9 +1,9 @@
-h1,h2,p,.discription,.title,.menuWrap a{
+/* h1,h2,p,.discription,.title,.menuWrap a{
     color: #c5d1d8;
     background-color: #c5d1d8cc;
     border-radius: 5px;
     max-width: max-content;
-}
+} */
 
 body{
     position: relative;
@@ -31,7 +31,7 @@ body{
 }
 #header .logo{
     background: url(../img/logo.svg) no-repeat left center; 
-    background-color: #0273b4dd;
+    /* background-color: #0273b4dd; */
     font-size: 0;
     color: transparent;
     width: 60px;
@@ -74,11 +74,20 @@ body{
     display: grid;
     align-items: center;
 }
-
+/* h1 {
+    font-size: clamp(16px, 5vw, 34px);
+   16px - 최소사이즈 
+   5vw - 기준점
+   34px - 최대사이즈
+  } */
+  
 .section01 h1{
-   font-size: 4vw; 
-   margin-bottom: 4vw;
+   /* font-size: 4vw;  */
+   font-size: clamp(30px, 5vw, 80px);
+   margin-bottom: clamp(10px, 3vw, 20px);;
    position: relative;
+   color: #3483B4;
+   font-weight: 800;
  }
 
  .section01 h1::before{
@@ -96,15 +105,21 @@ body{
     background-repeat: no-repeat;
 }
 
+.section01 h2{
+    font-weight: 500;
+}
+
 /* section02 */
 
 .section02 .inner{
     align-items: baseline;
     align-content: baseline;
     padding: 3vw 0;
+    grid-template-rows: auto auto 1fr;
 }
-.section02 .inner h2{
-    font-size: 3vw;
+.section02 .inner h2,.section03 .inner h2{
+    font-size: clamp(30px, 5vw, 40px);
+    color: #3483B4;
     margin-bottom: 3vw;
 }
 .section02 .inner p{
@@ -117,8 +132,98 @@ body{
 }
 .section02 .inner .ourWork{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 20vw);
     gap: 2vw;
+    height: 100%;
+    justify-content: end;
+}
+.section02 .inner .ourWork > div{
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
+    display: grid;
+    grid-template-rows: 1fr 0.15fr 0.5fr;
+}
+.section02 .inner .ourWork > div .title{
+    color: #045384;
+    font-weight: 800;
+}
+.section02 .inner .ourWork > div .discription{
+    color: #3483B4;
+}
+.section02 .inner .ourWork > div .icon{
+    background-image: url(../img/section02_con_icon01.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 65%;
+}
+
+.section02 .inner .ourWork .exhibition .icon{
+    background-image: url(../img/section02_con_icon02.svg);
+}
+
+.section02 .inner .ourWork .seminar .icon{
+    background-image: url(../img/section02_con_icon03.svg);
+}
+
+/* section03 */
+
+.section03 .inner{
+    align-content: baseline;
+    padding: 3vw 0;
+    grid-template-rows: auto 1fr;
+}
+
+.section03 .inner .serviceStep_wrap{
+    display: flex;    
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.section03 .inner .serviceStep_wrap > div{    
+    position: relative;
+    width: 12%;
+    text-align: center;
+    color: #ffffff;
+}
+.section03 .inner .serviceStep_wrap > div::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    top: 0;
+    right: -32.5%;
+    background-image: url(../img/arrow_r.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.section03 .inner .serviceStep_wrap > div:last-child:after{
+    content: none;
+}
+.section03 .inner .serviceStep_wrap .icon{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 65%;
+    height: 200px;
+}
+.section03 .inner .serviceStep_wrap .step1 .icon {
+    background-image: url(../img/ico_service_step01.svg);
+}
+.section03 .inner .serviceStep_wrap .step2 .icon {
+    background-image: url(../img/ico_service_step02.svg);
+}
+.section03 .inner .serviceStep_wrap .step3 .icon {
+    background-image: url(../img/ico_service_step03.svg);
+}
+.section03 .inner .serviceStep_wrap .step4 .icon {
+    background-image: url(../img/ico_service_step04.svg);
+}
+.section03 .inner .serviceStep_wrap .step5 .icon {
+    background-image: url(../img/ico_service_step05.svg);
+}
+.section03 .inner .serviceStep_wrap .step6 .icon {
+    background-image: url(../img/ico_service_step06.svg);
 }
 
 /* footer */

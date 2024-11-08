@@ -1,5 +1,6 @@
 $(document).ready(function () {
   let currentSection = 0;
+  const header = $("#header");
   const headerLogo = $("#header .logo");
   const sections = $(".section");
   const footer = $("footer");
@@ -55,6 +56,17 @@ $(document).ready(function () {
           isAnimating = false; // 더 이상 스크롤할 수 없을 때 플래그 해제
           isScrollingByWheel = false; // wheel 이벤트 종료
         }
+      }
+
+      // 헤더 로고 조정
+      if(currentSection >= 1){
+        header.stop(true, true).animate({top: "-70px",},300);
+
+        headerLogo.stop(true, true).animate({width: "190px",},300);
+      }else{
+        header.stop(true, true).animate({top: "0px",},300);
+        headerLogo.stop(true, true).animate({width: "60px",},300);
+
       }
 
       event.preventDefault(); // Prevent default scrolling

@@ -226,7 +226,7 @@ $(document).ready(function () {
   var popup = $(".section04 .popup")
   var popupClose = $(".section04 .popup .closeBtn")
   var popupNaviBtn = $(".section04 .popup .imgNavi")
-  var popupMainImg = $(".section04 .popup .mainImg img")
+  var popupMainImg = $(".section04 .popup .mainImg")
   // popup item
   var popupTitle = $(".section04 .popup .title")
   var popupDic = $(".section04 .popup .discription")
@@ -239,7 +239,7 @@ $(document).ready(function () {
     var tgData = popupData[index]
     popupTitle.text(tgData.title)
     popupDic.text(tgData.discription)
-    popupMainImg.attr("src",tgData.images[0])
+    popupMainImg.css("background-image","url('" + tgData.images[0] + "')")
     popupNaviBtn.find("a").eq(0).find("img").attr("src",tgData.images[0])
     popupNaviBtn.find("a").eq(1).find("img").attr("src",tgData.images[1])
     popupNaviBtn.find("a").eq(2).find("img").attr("src",tgData.images[2])
@@ -258,7 +258,7 @@ $(document).ready(function () {
     e.preventDefault()
     var tgImg = $(this).find('img').attr("src")
     var currentImg = popupMainImg.attr("src")
-    popupMainImg.attr("src", tgImg)
+    popupMainImg.css("background-image","url('"+tgImg+"')")
     popupNaviBtn.find("a").removeClass("active")
     $(this).addClass("active")
   })

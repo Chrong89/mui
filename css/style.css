@@ -352,17 +352,19 @@ body{
 }
 
 .section04 .popup .mainImg{
-    width: 100%;
+    width: 80%;
     height: auto;
     overflow: hidden;
+    background-image: url("../portfolio_rename/(10부스) 2024 대한민국교육박람회 - NHN에듀/NHN (1).jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     clip-path: url(#customClipPath);
 }
 
 .section04 .popup .mainImg img{
     max-width: none;
     height: 100%;
-    transform: translate(-10%);
-
 }
 
 .section04 .popup .textBox,.section04 .popup .imgNavi{

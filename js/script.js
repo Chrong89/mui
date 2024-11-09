@@ -233,7 +233,6 @@ $(document).ready(function () {
 
   listItem.on("click", function(e){
     e.preventDefault()
-    console.log($(this).index());
     popup.addClass("on")
     // popupdata 변경
     var index = $(this).index()
@@ -257,7 +256,6 @@ $(document).ready(function () {
   // 팝업 내 이미지 변경
   popupNaviBtn.find("a").on("click", function(e){
     e.preventDefault()
-    console.log(this);
     var tgImg = $(this).find('img').attr("src")
     var currentImg = popupMainImg.attr("src")
     popupMainImg.attr("src", tgImg)

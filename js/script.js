@@ -117,4 +117,34 @@ $(document).ready(function () {
   //     }
   //   }, 300)
   // );
+
+  // section04 팝업 열기
+  var listItem = $(".portfolioItem a")
+  var popup = $(".section04 .popup")
+  var popupClose = $(".section04 .popup .closeBtn")
+  var popupNaviBtn = $(".section04 .popup .imgNavi a")
+  var popupMainImg = $(".section04 .popup .mainImg img")
+
+  listItem.on("click", function(e){
+    e.preventDefault()
+    console.log("click");
+    popup.addClass("on")
+  })
+  popupClose.on("click", function(e){
+
+    console.log("click");
+    popup.removeClass("on")
+  })
+
+  // 팝업 내 이미지 변경
+  popupNaviBtn.on("click", function(e){
+    e.preventDefault()
+    console.log(this);
+    var tgImg = $(this).find('img').attr("src")
+    var currentImg = popupMainImg.attr("src")
+    popupMainImg.attr("src", tgImg)
+    popupNaviBtn.removeClass("active")
+    $(this).addClass("active")
+  })
+
 });

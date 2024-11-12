@@ -116,7 +116,7 @@ body{
 .section02 .inner{
     align-items: baseline;
     align-content: baseline;
-    padding: 3vw 0;
+    padding: 4vw 0;
     grid-template-rows: auto auto 1fr;
 }
 .section02 .inner h2,.section03 .inner h2, .section04 .inner h2{
@@ -173,7 +173,7 @@ body{
 
 .section03 .inner{
     align-content: baseline;
-    padding: 3vw 0;
+    padding: 4vw 0;
     grid-template-rows: auto 1fr;
 }
 
@@ -235,7 +235,7 @@ body{
 }
 .section04 .inner{
     align-content: baseline;
-    padding: 3vw 0;
+    padding: 4vw 0;
     grid-template-rows: auto 1fr;
 }
 .portfolioListWrap{

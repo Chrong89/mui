@@ -50,7 +50,7 @@ body{
  
 }
 
-#header .menuWrap li a:hover{
+#header .menuWrap li a:hover,#header .menuWrap li a.active{
  color: #ffffff;
  background-color: #FF9D00;
  transition: all .2s ease-in-out;
@@ -61,6 +61,7 @@ body{
 .section{
     width: 100vw;
     height: 100vh;
+    position: relative;
 }
 
 .inner{
@@ -238,6 +239,7 @@ body{
     align-content: baseline;
     padding: 4vw 0;
     grid-template-rows: auto 1fr;
+    z-index: 1;
 }
 .portfolioListWrap{
     display: flex;
@@ -484,6 +486,80 @@ body{
     top 189vh right -8vw,
     top 343vh right -40vw;
     background-size: 80vw,65vw,110vw,60vw
+}
+
+.obj{
+    position: absolute;
+}
+
+.section01 .obj01{
+    top: 10vh;
+    right: 33vw;
+    width: 10vw;
+}
+.section01 .obj02{
+    top: 20vh;
+    right: 19vw;
+    width: 7vw;
+}
+.section01 .obj03{
+    top: 36vh;
+    right: -5vw;
+    width: 20vw;
+}
+
+.section02 .obj01{
+    top: 27vh;
+    left: 0vw;
+    width: 20vw;
+}
+.section02 .obj02{
+    top: 57vh;
+    left: -6vw;
+    width: 20vw;
+}
+
+.section03 .obj01{
+    top: 40vh;
+    left: 1vw;
+    width: 10vw;
+}
+.section03 .obj02{
+    top: 82vh;
+    left: 10vw;
+    width: 4vw;
+}
+.section03 .obj03{
+    top: 17vh;
+    right: 3vw;
+    width: 7vw;
+}
+.section03 .obj04{
+    top: 99vh;
+    right: 25vw;
+    width: 8vw;
+}
+.section03 .obj05{
+    bottom: 1vh;
+    right: 0vw;
+    width: 14vw;
+}
+
+.section04 .obj01{
+    top: 17vh;
+    left: -1vw;
+    width: 9vw;
+}
+.section04 .obj02{
+    top: 72vh;
+    right: 12vw;
+    width: 19vw;
+    transform: rotate(-90deg);
+}
+.section04 .obj03{
+    top: 52vh;
+    right: 3vw;
+    width: 20vw;
 }
 
 /* background object 관련 */

@@ -8,6 +8,26 @@ $(document).ready(function () {
   let isAnimating = false; // 플래그 변수
   let isScrollingByWheel = false; // wheel 이벤트 중인지 확인하는 플래그
 
+  // header 메뉴이동
+  header.find("a").on("click", function (e) {
+    e.preventDefault();
+    var menu = $(this);
+    var menuIndex = menu.parent().index();
+    header.find("a").removeClass("active");
+    menu.addClass("active");
+    $("html, body").animate(
+      {
+        scrollTop: $(sections[menuIndex + 1]).offset().top,
+      },
+      800,
+      function () {
+        currentSection = menuIndex + 1;
+        console.log(currentSection, menuIndex);
+        isAnimating = false;
+      }
+    );
+  });
+
   // wheel 이벤트 처리
   window.addEventListener(
     "wheel",
@@ -35,6 +55,7 @@ $(document).ready(function () {
             }
           );
         } else {
+          currentSection = 0;
           isAnimating = false; // 더 이상 스크롤할 수 없을 때 플래그 해제
           isScrollingByWheel = false; // wheel 이벤트 종료
         }
@@ -67,6 +88,17 @@ $(document).ready(function () {
         headerLogo.stop(true, true).animate({ width: "60px" }, 300);
       }
 
+      // menu active
+      console.log(currentSection);
+
+      header.find("li a").removeClass("active");
+      if (currentSection > 0) {
+        header
+          .find("li")
+          .eq(currentSection - 1)
+          .find("a")
+          .addClass("active");
+      }
       event.preventDefault(); // Prevent default scrolling
     },
     { passive: false }
@@ -122,7 +154,6 @@ $(document).ready(function () {
   $(document).mousemove(function (event) {
     if (event.clientY <= 70 && currentSection >= 1) {
       if (!isHeaderVisible) {
-        console.log("헤더 내려와");
         header.addClass("on");
         header.stop(true, true).animate({ top: "0px" }, 300);
         isHeaderVisible = true; // 헤더가 표시되었음을 추적

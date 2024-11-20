@@ -271,7 +271,7 @@ body{
     width: auto;
     height: 100%;
     max-width: none;
-    transform: translateX(-35%);
+    transform: translateX(-15%);
 }
 
 
@@ -281,59 +281,41 @@ body{
 
 .portfolioItem a .itemInfo{
     position: relative;
-    max-width: fit-content;
-    padding: 13%;
+    background: rgba(1, 75, 120, 0.8);
     z-index: 1;
+    width: 100%;
+    height: auto;
+    bottom: -80%;
+    padding: 0% 10%;
 }
-
-.portfolioItem a .itemInfo .itemBg{
-    transition: all 0.5s ease-in-out;
-    display: block;
-    position: absolute;
-    width: 90%;
-    height: 80%;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    background-image: url(../img/portfolio_item_bg.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 90%;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-}
-
 
 .portfolioItem a .itemInfo > span{
     display: block;
+    margin-bottom: 10px;
+}
+.portfolioItem a .itemInfo .discription,.portfolioItem a .itemInfo .client{
+    font-size: 13px;
 }
 
-.portfolioItem a .itemInfo .discription{
-    transition: height opacity 0.5s ease-in-out;
-    width: 0;
-    height: 0;
-    opacity: 0;
-    overflow: hidden;
+.portfolioItem a .cartegori{
+    position: absolute;
+    top: 80%;
+    padding: 3% 10%;
+    background: rgba(1, 75, 120, 0.8);
+}
+
+.portfolioItem a:hover .itemInfo{
+    bottom: 0%;
+    padding: 3% 10%;
 }
 
 .portfolioItem a:hover .cartegori{
-    margin-bottom: 10px;
-    font-size: 20px;
+    position: absolute;
+    top: 10%;
+    padding: 3% 10%;
+    background: rgba(1, 75, 120, 0.8);
 }
 
-.portfolioItem a:hover .itemInfo .discription{
-    width: 100%;
-    height: 80px;
-    max-height: fit-content;
-    opacity: 1;   
-}
-.portfolioItem a:hover .itemInfo .itemBg{
-    background-size: 120%;
-    width: 131%;
-    height: 157%;
-    transform: translate(-52%, -38%) rotate(15deg);
-}
 
 .section04 .popup.on{
     display: flex;

@@ -1,4 +1,15 @@
 $(document).ready(function () {
+
+    // 메뉴 이동
+    $('.menu a').on('click',function(e){
+      e.preventDefault()
+      var tg = $(this).attr('href')
+      var tgSection = $("#" + tg).offset().top;
+      console.log(tgSection);
+      
+      $("html, body").animate({scrollTop: tgSection -80,},800);
+    });
+
     // 스크롤 시 gnb 표시 
     $(window).on(
       'scroll',
@@ -246,8 +257,6 @@ $(document).ready(function () {
   
     // 슬라이드 클릭 이벤트
     $(document).on("click", ".swiper-slide", function (e) {
-        console.log("Event Target:", e.target);
-        console.log("Clicked Slide:", this);
       
         // .imgNavi 내부 클릭 여부 확인
         if ($(e.target).closest(".imgNavi").length > 0) {
@@ -312,8 +321,6 @@ $(document).ready(function () {
 $(document).on("click", ".imgNavi a", function (e) {
     e.preventDefault(); // a 태그의 기본 동작 제거
     e.stopPropagation(); // 이벤트 전파 차단
-  
-    console.log("이미지 변경 로직 실행");
   
     // 선택한 이미지로 변경
     const imgSrc = $(this).find("img").attr("src");

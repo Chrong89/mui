@@ -1,204 +1,314 @@
 <!DOCTYPE html>
 <html lang="kr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUI CREATIVE</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
-        integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/script.js"></script>
-    <title>MUI</title>
-</head>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+    integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
 <body>
-    <header id="header">
-        <div class="inner">
-            <div class="logo">logo</div>
-            <ul class="menuWrap">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="#">Portfolio</a></li>
-            </ul>
+    <header id="header" >
+        <div class="inner">            
+            <h1>mui-creative</h1>
+            <div class="menu">
+                <div class="about"><a href="#about">about</a></div>
+                <div class="service"><a href="#service">service</a></div>
+                <div class="portfolio"><a href="#portfolio">portfolio</a></div>
+            </div>
+            <div class="logoV">
+                <img src="/img/logo_vertical.svg" alt="">
+            </div>
         </div>
     </header>
-    <section class="section section01">
+    <div class="gnb">
         <div class="inner">
-            <div class="title">
-                <h1>Mui-creative</h1>
-                <h2>인력 아웃소싱, 이벤트 기획 및 운영의 전문가</h2>
-                <p>단순한 대행사가 아닙니다. <br>브랜드 가치를 높이고, 나아가 클라이언트의 니즈에 맞는 전략적 컨설팅을 통해 새로운 문화를 만들어 갑니다.
-                </p>
-                <span class="mui_hanja"></span>
+            <div class="logo">
+                <img src="/img/logo_horizontal.svg" alt="">
+            </div>
+            <div class="menu">
+                <div class="about"><a href="#about">about</a></div>
+                <div class="service"><a href="#service">service</a></div>
+                <div class="portfolio"><a href="#portfolio">portfolio</a></div>
             </div>
         </div>
-        <div class="obj obj01">
-            <img src="img/section01_obj01.svg" alt="">
-        </div>
-        <div class="obj obj02">
-            <img src="img/section01_obj02.svg" alt="">
-        </div>
-        <div class="obj obj03">
-            <img src="img/section01_obj03.svg" alt="">
-        </div>
-    </section>
-    <section class="section section02">
+    </div>
+    <div class="section section01">
         <div class="inner">
-            <h2>About</h2>
-            <p>
-                <span>국내 MICE 산업 중 전시/컨벤션/세미나 등을 전문적으로 대행해 드리고 있습니다.</span>
-                <span>셋, 넷… 여럿과 힘들게 맞추어 갈 필요 없습니다.</span>
-                <span>MUI-Creative 는 클라이언트의 목적에 맞게 각 분야별 업체 선정 및 컨설팅 하고 고객의 프로젝트에서 새로운 가치를 창조하기 위해 끊임없는 고민과 도전을 멈추지
-                    않겠습니다.</span>
-            </p>
+            <h2>Specialist in Human Resource Outsourcing and Event Strategy</h2>
+                  
+            <div class="mainVisual swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images\system\2023\system (10부스) 23년 대한민국 교육박람회 (코엑스) - 빅드림\KakaoTalk_20230113_095401466_06.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images\wood\2022\wood (9부스) AGF 2022 (킨텍스) - 앙상블 스타즈\compressed_KakaoTalk_20221220_110309159-1.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images\wood\2024\wood(2부스) 2024 서울국제식품산업대전(킨텍스) - sonic biochem\compressed_KakaoTalk_20240611_105101779_15-1.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images\wood\2023\wood (4부스) 2023 에듀테크 코리아 페어(코엑스) - 유비온\유비온 (1).jpg" />
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="section section02">
+        <div class="inner">
+            <h2 class="sectionName">
+                ABOUT
+            </h2>
+            <div class="sectionTitle">
+                <p><span class="point">새로운 가치</span>를 창조하기 위한</p>
+                <p>끊임없는 <span class="point">고민과 도전</span></p>                
+            </div>
+            <div class="sectionSubTxt">
+                국내 MICE 산업 중 전시/컨벤션/세미나 등을 전문적으로 대행해 드리고 있습니다. 클라이언트의 목적에 맞게 각 분야별 업체 선정 및 컨설팅을 하고있습니다. 여러 업체와 힘들게 맞추어 갈 필요 없습니다.
+            </div>
+            <div class="aboutConWrap">
+                <div class="item aboutItem01">
+                    <img src="img/ico_about_01.svg" alt="">
+                    <div class="tit">
+                        팝업 및 이벤트 오프라인 운영 대행
+                    </div>
+                    <div class="txt">
+                        전반적인 프로모션 기획과 장소 섭외 및 부스 제작 프로모터, MC, STAFF 원스톱 섭외 등 체계적인 운영을 제공합니다.
+                    </div>
+                </div>
+                <div class="item aboutItem02">
+                    <img src="img/ico_about_02.svg" alt="">
+                    <div class="tit">
+                        각종 전시회 부스 시공 대행
+                    </div>
+                    <div class="txt">
+                        각종 부스 시공업체를 선별하여 클라이언트 니즈에 맞는 디자인을 제공합니다.
+                    </div>
+                </div>
+                <div class="item aboutItem03">
+                    <img src="img/ico_about_03.svg" alt="">
+                    <div class="tit">
+                        각종 판촉물 구매 대행 및 세미나 진행
+                    </div>
+                    <div class="txt">
+                        각종 세미나 장소 섭외(프라이빗 골프장 등)는 물론 진행시 필요한 구매 판촉물 기획 제작 및 구매대행까지 가능합니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-            <div class="ourWork">
-                <div class="popup">
-                    <div class="icon"></div>
-                    <div class="title">팝업 및 이벤트 오프라인 운영대행</div>
-                    <div class="discription">전반적인 프로모션 기획과 장소 섭외 및 부스 제작 프로모터, MC, STAFF 등 원스톱 섭외등 체계적인 운영 제공합니다</div>
-                </div>
-                <div class="exhibition">
-                    <div class="icon"></div>
-                    <div class="title">각종 전시회 부스 시공대행</div>
-                    <div class="discription">각종 부스 시공업체를 선별하여 클라이언트 니즈에 맞는 디자인을 제공합니</div>
-                </div>
-                <div class="seminar">
-                    <div class="icon"></div>
-                    <div class="title">각종 판촉물 구매 대행 및 세미나 진행</div>
-                    <div class="discription">각종 세미나 장소 섭외(프라이빗 골프장 등) 및 진행시 필요한 구매 판촉물 기획 제작 및 구매대행까지 가능합니다</div>
-                </div>
-            </div>
-        </div>
-        <div class="obj obj01">
-            <img src="img/section02_obj01.svg" alt="">
-        </div>
-        <div class="obj obj02">
-            <img src="img/section01_obj03.svg" alt="">
-        </div>
-    </section>
-    <section class="section section03">
+    <div class="section section03">
         <div class="inner">
-            <h2>Service</h2>
-            <div class="serviceStep_wrap">
-                <div class="step1">
-                    <div class="icon"></div>
-                    <div class="discription">
-                        <p>서비스 신청</p>
-                        <p>(유선/E-MAIL)</p>
+            <h2 class="sectionName">
+                SERVICE
+            </h2>
+            <div class="serviceConWrap">
+                <div class="item serviceItem01">
+                    <img src="img/ico_service_01.svg" alt="">
+                    <div class="txt">
+                        서비스 신청 <span class="fwr">(유선/E-MAIL)</span>
                     </div>
                 </div>
-                <div class="step2">
-                    <div class="icon"></div>
-                    <div class="discription">
-                        <p>프로젝트</p>
-                        <p>초안 컨설팅</p>
-                        <p>(가견적)</p>
+                <div class="item serviceItem02">
+                    <img src="img/ico_service_02.svg" alt="">
+                    <div class="txt">
+                        프로젝트 초안 컨설팅 <span class="fwr">(가견적)</span>
                     </div>
                 </div>
-                <div class="step3">
-                    <div class="icon"></div>
-                    <div class="discription">
-                        <p>초안 선택 후</p>
-                        <p>디테일 협의</p>
-                        <p>(1차견적 및 업체선정)</p>
+                <div class="item serviceItem03">
+                    <img src="img/ico_service_03.svg" alt="">
+                    <div class="txt">
+                        초안 선택 후 디테일 협의 <span class="fwr">(1차견적 및 업체선정)</span>
                     </div>
                 </div>
-                <div class="step4">
-                    <div class="icon"></div>
-                    <div class="discription">
-                        <p>기타 요청사항 협의</p>
+                <div class="item serviceItem04">
+                    <img src="img/ico_service_04.svg" alt="">
+                    <div class="txt">
+                        기타 요청사항 협의
                     </div>
                 </div>
-                <div class="step5">
-                    <div class="icon"></div>
-                    <div class="discription">
-                        <p>최종안 기획 후 진행</p>
-                        <p>(최종견적)</p>
+                <div class="item serviceItem05">
+                    <img src="img/ico_service_05.svg" alt="">
+                    <div class="txt">
+                        최종안 기획 후 진행 <span class="fwr">(최종견적)</span>
                     </div>
                 </div>
-                <div class="step6">
-                    <div class="icon"></div>
-                    <div class="discription">
-                        <p>행사진행</p>
+                <div class="item serviceItem06">
+                    <img src="img/ico_service_06.svg" alt="">
+                    <div class="txt">
+                        행사진행
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="obj obj01">
-            <img src="img/section03_obj01.svg" alt="">
-        </div>
-        <div class="obj obj02">
-            <img src="img/section03_obj02.svg" alt="">
-        </div>
-        <div class="obj obj03">
-            <img src="img/section03_obj03.svg" alt="">
-        </div>
-        <div class="obj obj04">
-            <img src="img/section03_obj04.svg" alt="">
-        </div>
-        <div class="obj obj05">
-            <img src="img/section03_obj05.svg" alt="">
-        </div>
-    </section>
-    <section class="section section04">
+    </div>
+    <div class="section section04">
         <div class="inner">
-            <h2>portfolio</h2>
-            <div class="portfolioListWrap">
+            <h2 class="sectionName">
+                PORTFOLIO
+            </h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="default-content">
+                            <img src="images/wood/2024/wood (10부스) 2024 대한민국교육박람회(코엑스) - NHN에듀/compressed_NHN (1)-0.jpg" alt="">
+                            <div class="cartegori">cartegori</div>
+                            <div class="itemInfo">
+                              <span class="eventTitle">2024 대한민국교육박람회(코엑스)</span>
+                              <span class="discription">부스 수: 20</span>
+                              <span class="client">클라이언트: NHN에듀</span>
+                            </div>
+                            
+                        </div>
+                        <div class="extra-content">Extra Content for Slide 1</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="default-content">
+                            <img src="images/wood/2023/wood (4부스) 2023 에듀테크 코리아 페어(코엑스) - 유비온/유비온 (1).jpg" alt="">
+                            <div class="cartegori">cartegori</div>
+                            <div class="itemInfo">
+                              <span class="eventTitle">eventTitle</span>
+                              <span class="discription">discription</span>
+                              <span class="client">client</span>
+                            </div>
+                            
+                        </div>
+                        <div class="extra-content">Extra Content for Slide 2</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="default-content">
+                            <img src="/images/system/2023/system (20부스) AGF 2023 (킨텍스) - Bushiroad/부쉬로드 (2).jpg" alt="">
+                            <div class="cartegori">cartegori</div>
+                            <div class="itemInfo">
+                              <span class="eventTitle">eventTitle</span>
+                              <span class="discription">discription</span>
+                              <span class="client">client</span>
+                            </div>
+                            
+                        </div>
+                        <div class="extra-content">Extra Content for Slide 3</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="default-content">
+                            <img src="images/system/2023/system (10부스) 23년 대한민국 교육박람회 (코엑스) - 빅드림/KakaoTalk_20230113_095401466_09.jpg" alt="">
+                            <div class="cartegori">cartegori</div>
+                            <div class="itemInfo">
+                              <span class="eventTitle">eventTitle</span>
+                              <span class="discription">discription</span>
+                              <span class="client">client</span>
+                            </div>
+                            
+                        </div>
+                        <div class="extra-content">Extra Content for Slide 4</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="default-content">
+                            <img src="images/wood/2024/wood (20부스) 2024 대한민국교육박람회(코엑스) - EBS/EBS (3).jpg" alt="">
+                            <div class="cartegori">cartegori</div>
+                            <div class="itemInfo">
+                              <span class="eventTitle">eventTitle</span>
+                              <span class="discription">discription</span>
+                              <span class="client">client</span>
+                            </div>
+                            
+                        </div>
+                        <div class="extra-content">Extra Content for Slide 5</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="default-content">
+                            <div class="cartegori">cartegori</div>
+                            <div class="itemInfo">
+                              <span class="eventTitle">eventTitle</span>
+                              <span class="discription">discription</span>
+                              <span class="client">client</span>
+                            </div>
+                            
+                        </div>
+                        <div class="extra-content">Extra Content for Slide 6</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="default-content">
+                            <div class="cartegori">cartegori</div>
+                            <div class="itemInfo">
+                              <span class="eventTitle">eventTitle</span>
+                              <span class="discription">discription</span>
+                              <span class="client">client</span>
+                            </div>
+                            
+                        </div>
+                        <div class="extra-content">Extra Content for Slide 7</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="default-content">
+                            <div class="cartegori">cartegori</div>
+                            <div class="itemInfo">
+                              <span class="eventTitle">eventTitle</span>
+                              <span class="discription">discription</span>
+                              <span class="client">client</span>
+                            </div>
+                            
+                        </div>
+                        <div class="extra-content">Extra Content for Slide 8</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="default-content">
+                            <div class="cartegori">cartegori</div>
+                            <div class="itemInfo">
+                              <span class="eventTitle">eventTitle</span>
+                              <span class="discription">discription</span>
+                              <span class="client">client</span>
+                            </div>
+                            
+                        </div>
+                        <div class="extra-content">Extra Content for Slide 9</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="default-content">
+                            <div class="cartegori">cartegori</div>
+                            <div class="itemInfo">
+                              <span class="eventTitle">eventTitle</span>
+                              <span class="discription">discription</span>
+                              <span class="client">client</span>
+                            </div>
+                            
+                        </div>
+                        <div class="extra-content">Extra Content for Slide 10</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="default-content">
+                            <div class="cartegori">cartegori</div>
+                            <div class="itemInfo">
+                              <span class="eventTitle">eventTitle</span>
+                              <span class="discription">discription</span>
+                              <span class="client">client</span>
+                            </div>
+                            
+                        </div>
+                        <div class="extra-content">Extra Content for Slide 11</div>
+                    </div>
+                </div>
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
-        <div class="popup">
-            <svg width="0" height="0">
-                <defs>
-                    <clipPath id="customClipPath">
-                        <path
-                            d="M910.179 959H0V0H598.33C662.462 70.1265 703.019 161.867 708.312 262.595L712.318 338.835C717.005 428.011 764.75 509.344 840.331 556.903C980.415 645.05 1009.25 833.418 910.179 959Z" />
-                    </clipPath>
-                </defs>
-            </svg>
-            <div class="mainImg">
-            </div>
-            <div class="textBox">
-                <div class="title">Title</div>
-                <div class="discription">Discription</div>
-            </div>
-            <div class="imgNavi">
-                <a href="#" class="active">
-                    <img src="portfolio_rename/(10부스) 2024 대한민국교육박람회 - NHN에듀/NHN (1).jpg" alt="">
-                </a>
-                <a href="#">
-                    <img src="portfolio_rename/(10부스) 2024 대한민국교육박람회 - NHN에듀/NHN (2).jpg" alt="">
-                </a>
-                <a href="#">
-                    <img src="portfolio_rename/(10부스) 2024 대한민국교육박람회 - NHN에듀/NHN에듀 (5).jpg" alt="">
-                </a>
-                <a href="#">
-                    <img src="portfolio_rename/(10부스) 2024 대한민국교육박람회 - NHN에듀/NHN에듀 (6).jpg" alt="">
-                </a>
-            </div>
-            <div class="closeBtn">
-            </div>
-        </div>
-
-        <div class="obj obj01">
-            <img src="img/section04_obj01.svg" alt="">
-        </div>
-        <div class="obj obj02">
-            <img src="img/section02_obj01.svg" alt="">
-        </div>
-        <div class="obj obj03">
-            <img src="img/section01_obj03.svg" alt="">
-        </div>
-    </section>
+    </div>
+    
     <footer id="footer">
         <div class="inner">
-            <div class="logo"><img src="img/logo_gray.svg" alt=""></div>
+            <div class="logo"><img src="img_v1/logo_gray.svg" alt=""></div>
             <div class="address">
                 <p>010-8874-6080</p>
                 <p>서울 강서구 하늘길 210 김포공항 화물청사</p>
@@ -207,6 +317,7 @@
             <a href="mailto:Company@mui-creative.kr" class="email">Company@mui-creative.kr</a>
         </div>
     </footer>
-</body>
 
-</html>
+
+</body>
+</html>  

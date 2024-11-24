@@ -237,7 +237,7 @@ html,body,*{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #dddddd;
+    background: #F7F7F7;
     height: 100%;
     transition: all 0.5s ease;
     position: relative;
@@ -327,7 +327,7 @@ html,body,*{
 
 .swiper-slide .default-content .itemInfo .eventTitle{
     font-weight: 500;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
     width: 100%;
 }
 .swiper-slide .default-content .itemInfo .eventTitle::after{
@@ -337,7 +337,7 @@ html,body,*{
     height: 1px;
     background-color: #ffffff;
     position: relative;
-    top: 10px;
+    bottom: -10px;
 }
 
 .swiper-slide .default-content .itemInfo .discription,.swiper-slide .default-content .itemInfo .client{
@@ -380,9 +380,61 @@ font-size: 24px;
 
 /* 확장된 슬라이드에서 추가 콘텐츠 표시 */
 .swiper-slide.expanded .extra-content {
-display: block;
-opacity: 1;
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
 }
+.swiper-slide.expanded .extra-content .changeMain{
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+.swiper-slide.expanded .extra-content .changeMain img{
+    min-height: 100%;
+    width: 100%;
+}
+.swiper-slide.expanded .extra-content .txtNavi{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.swiper-slide.expanded .extra-content .txtNavi .itemInfo{
+    padding: 30px;
+}
+.swiper-slide.expanded .extra-content .txtNavi .itemInfo > span{
+    display: block;
+    text-align: left;
+    font-size: 20px;
+}
+.swiper-slide.expanded .extra-content .txtNavi .itemInfo .eventTitle{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.swiper-slide.expanded .extra-content .txtNavi .imgNavi{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+}
+.swiper-slide.expanded .extra-content .txtNavi .imgNavi a{
+    width: 65px;
+    overflow: hidden;
+    height: 65px;
+    border-radius: 65px;
+    filter: grayscale(100%);
+}
+.swiper-slide.expanded .extra-content .txtNavi .imgNavi a.active{
+    filter: grayscale(0%);
+}
+.swiper-slide.expanded .extra-content .txtNavi .imgNavi a img{
+    height: 100%;
+    max-width: max-content;
+}
+
 /* 아이템 확장 시 레이아웃 틀어짐 방지를 위한 dummy slide */
 .dummy-slide{
 visibility: hidden;

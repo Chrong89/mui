@@ -473,3 +473,18 @@ visibility: hidden;
     background-size: 45px auto;
     letter-spacing: normal;
 }
+
+
+
+/* 반응형 작업 시작 */
+@media (max-width:1024px) {
+    body{
+        /* background-color: #333; */
+    }
+}
+
+@media (max-width:530px) {
+    body{
+        /* background-color: #666; */
+    }
+}

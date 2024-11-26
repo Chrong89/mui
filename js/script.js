@@ -40,7 +40,7 @@ $(document).ready(function () {
       };
     }
   
-    // 상단 메인 비주얼 영역
+    // 상단 메인 비주얼 영역 
     const mainVisualSwiper = new Swiper('.mainVisual.mySwiper', {
       spaceBetween: 0,
       effect: "fade",
@@ -64,6 +64,32 @@ $(document).ready(function () {
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        200: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        530: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1300: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+        1600: {
+          slidesPerView: 5,
+          spaceBetween: 20,
+        },
+        2000: {
+          slidesPerView: 6,
+          spaceBetween: 20,
+        },
       },
       on: {
         init: function () {

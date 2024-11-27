@@ -74,7 +74,7 @@ $(document).ready(function () {
           slidesPerView: 2,
           spaceBetween: 20,
         },
-        1024: {
+        900: {
           slidesPerView: 3,
           spaceBetween: 20,
         },
@@ -303,8 +303,15 @@ $(document).ready(function () {
         previousIndex = portfolioSwiper.activeIndex;
       
         resetSlides();
-      
-        const requiredDummySlides = Math.max(0, realIndex - (portfolioSwiper.slides.length - 5));
+        var dummySlideCalc = window.innerWidth
+        var dummySlideCalcNum
+        if(dummySlideCalc >= 2000){
+          dummySlideCalcNum =6
+        }else{
+          dummySlideCalcNum =5
+        }
+        
+        const requiredDummySlides = Math.max(0, realIndex - (portfolioSwiper.slides.length - dummySlideCalcNum));
         updateDummySlides(requiredDummySlides);
       
         clickedSlide.classList.add("expanded");

@@ -2,11 +2,13 @@ html,body,*{
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     letter-spacing: -1px;
     color: #333333;
+    transition: all 0.3s ease-in-out;
 }
 
 .inner{
     width: 80%;
     height: 100vh;
+    max-height: 900px;
     min-height: 800px;
     margin: 0 auto;
     /* background-color: rgba(173, 173, 173, 0.056); */
@@ -52,8 +54,12 @@ html,body,*{
 #header .inner .logoV{
     transition: all 0.3s ease-in-out;
     height: auto;
-    margin-bottom: 70px;
+    width: 100%;
+    margin: 0 auto 70px;
     overflow: hidden;
+}
+#header .inner .logoV img{
+    margin: 0 auto;
 }
 
 /* navigation */
@@ -422,9 +428,9 @@ font-size: 24px;
 }
 .swiper-slide.expanded .extra-content .txtNavi .imgNavi a{
     width: 65px;
-    overflow: hidden;
     height: 65px;
     border-radius: 65px;
+    overflow: hidden;
     filter: grayscale(100%);
 }
 .swiper-slide.expanded .extra-content .txtNavi .imgNavi a.active{
@@ -477,14 +483,129 @@ visibility: hidden;
 
 
 /* 반응형 작업 시작 */
+@media (max-width:1600px){
+    .inner{
+        width: 85vw;
+        max-height: 45vw;
+        min-height: unset;
+    }
+    #header .menu{
+        margin-bottom: 3vw;
+    }
+    #header .inner .logoV{
+        width: 23vw;
+        margin: 0 auto 2vw;
+    }
+    .section01 .inner{
+        padding: 2vw 0;
+    }
+    .section01 .inner .mainVisual{
+        min-height: 25vw;
+    }
+    .section02 .inner{
+        padding-bottom: 2vw;
+    }
+    .sectionName{
+        margin-bottom:5vw
+    }
+    .sectionTitle{
+        margin-bottom:3vw
+    }
+    .sectionSubTxt{
+        margin-bottom:5vw
+    }
+    .swiper-button-next, .swiper-button-prev{
+        top:5vw
+    }
+    #footer .inner .email{
+        font-size:  clamp( 16px,2vw,20px);;
+    }
+}
+@media (max-width:1440px) {
+    .inner{
+        width: 90vw;
+        max-height: 50vw;
+    }
+    .sectionSubTxt{
+        width: 90%;
+    }
+    .aboutConWrap .item{
+        width: 32%;
+        padding: 2vw;
+    }
+    .aboutConWrap .item .tit,.serviceConWrap .item{
+        font-size: clamp(18px, 1.5vw, 20px);
+    }
+    
+}
 @media (max-width:1024px) {
-    body{
-        /* background-color: #333; */
+    .sectionSubTxt{
+        width: 100%;
+    }
+    .section02 .inner{
+        padding-bottom: 0vw;
+    }
+    .aboutConWrap{
+        flex-wrap: wrap;
+    }
+    .aboutConWrap .item{
+        width: 48%;
+        margin-bottom: 2vw;
+    }
+    .serviceConWrap .item{
+        width: 50%;
+    }
+    .swiper-slide.expanded .extra-content{
+        flex-direction: column;
+    }
+    .swiper-slide.expanded .extra-content .changeMain{
+        width: 100%;
+        height: 70%;
+        overflow: auto;
+    }
+    .swiper-slide.expanded .extra-content .txtNavi{
+        width: 100%;
+        height: 30%;
+        flex-direction: row;
+    }
+    .swiper-slide.expanded .extra-content .txtNavi .itemInfo{
+        padding: 2vw 3vw;
+    }
+    .swiper-slide.expanded .extra-content .txtNavi .imgNavi{
+        max-width: 55%;
+        align-content: flex-start;
+    }
+    .swiper-slide.expanded .extra-content .txtNavi .imgNavi a{
+        width: 60px;
+        height: 60px;
+    }
+    .swiper-slide.expanded .extra-content .txtNavi .itemInfo > span{
+        font-size: clamp(16px, 3vw, 18px);
+    }
+    .swiper-slide.expanded .extra-content .txtNavi .itemInfo .eventTitle{
+        font-size: clamp(18px, 4vw, 20px);
     }
 }
 
 @media (max-width:530px) {
-    body{
-        /* background-color: #666; */
+    .inner{
+        max-height: 70vh;
+    }
+    .section01 .inner .mainVisual .swiper-slide img{
+        width: auto;
+        min-width: auto;
+        max-width: none;
+        height: 100%;
+    }
+    .aboutConWrap .item{
+        width: 100%;
+        padding: 5vw;
+        margin-bottom: 5vw;
+    }
+    .sectionSubTxt{
+        font-size: 16px;
+    }
+    .serviceConWrap .item{
+        width: 100%;
     }
 }

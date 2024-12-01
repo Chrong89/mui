@@ -280,10 +280,28 @@ $(document).ready(function () {
   
     // Swiper 업데이트
     portfolioSwiper.update();
-  
+    mobileSlideViwe();
+    //슬라이드 아이템 초기 설정
+    function mobileSlideViwe(){
+      var winWidthcheck = window.innerWidth
+      if (winWidthcheck <= 530) {
+        console.log("mobile");
+        expandedAllSlides()
+      }else{
+        resetSlides()
+      }
+    }
+
     // 슬라이드 클릭 이벤트
     $(document).on("click", ".swiper-slide", function (e) {
       
+        var winWidthcheck = window.innerWidth
+        
+        // 모바일 화면의 경우 클릭 이벤트 동작 못하도록 제어
+        if(winWidthcheck <= 530){
+          return
+        }
+
         // .imgNavi 내부 클릭 여부 확인
         if ($(e.target).closest(".imgNavi").length > 0) {
           console.log(".imgNavi 내부 클릭 감지, Swiper 클릭 동작 중단");
@@ -303,19 +321,20 @@ $(document).ready(function () {
         previousIndex = portfolioSwiper.activeIndex;
       
         resetSlides();
-        var dummySlideCalc = window.innerWidth
+        
+        // 화면에 표시되는 아이템 갯수에 따라 더미 슬라이드 갯수 조정
         var dummySlideCalcNum
-        if(dummySlideCalc >= 2000){
+        if(winWidthcheck >= 2000){
           dummySlideCalcNum =6
         }else{
           dummySlideCalcNum =5
         }
-        
         const requiredDummySlides = Math.max(0, realIndex - (portfolioSwiper.slides.length - dummySlideCalcNum));
         updateDummySlides(requiredDummySlides);
       
         clickedSlide.classList.add("expanded");
         portfolioSwiper.slideTo(realIndex, 300); // 클릭된 슬라이드를 페이지 왼쪽에 맞춤
+
       });
       
   
@@ -334,6 +353,10 @@ $(document).ready(function () {
     function resetSlides() {
       portfolioSwiper.slides.forEach(slide => slide.classList.remove('expanded')); // 모든 슬라이드 확장 해제
     }
+    // 모든 슬라이드 확장
+    function expandedAllSlides() {
+      portfolioSwiper.slides.forEach(slide => slide.classList.add('expanded')); // 모든 슬라이드 확장 해제
+    }
   
     // 가상 슬라이드 업데이트 함수
     function updateDummySlides(count) {
@@ -351,7 +374,7 @@ $(document).ready(function () {
     }
 
  // 확장된 슬라이드에서 이미지 변경
-$(document).on("click", ".imgNavi a", function (e) {
+  $(document).on("click", ".imgNavi a", function (e) {
     e.preventDefault(); // a 태그의 기본 동작 제거
     e.stopPropagation(); // 이벤트 전파 차단
   
@@ -362,6 +385,11 @@ $(document).on("click", ".imgNavi a", function (e) {
     // 활성화 상태 업데이트
     $(this).siblings().removeClass("active");
     $(this).addClass("active");
+  });
+
+  // 화면을 530 이하로 줄이는 경우 스타일 설정
+  $(window).resize(function(){
+    mobileSlideViwe()
   });
 
 

@@ -542,6 +542,10 @@ visibility: hidden;
     }
     .section02 .inner{
         padding-bottom: 0vw;
+        max-height: unset;
+    }
+    .section03 .inner,.section04 .inner{
+        max-height: unset;
     }
     .aboutConWrap{
         flex-wrap: wrap;

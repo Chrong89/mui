@@ -760,4 +760,7 @@ visibility: hidden;
     .swiper-slide.expanded .default-content .cartegori, .swiper-slide:hover .default-content .cartegori{
         margin: 5% 50% 0 0;
     }
+    .swiper-container{
+        height: 70vh;
+    }
 }

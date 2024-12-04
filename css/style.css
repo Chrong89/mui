@@ -169,10 +169,12 @@ html,body,*{
 
 .aboutConWrap .item{
     background-color: #F7F7F7;
-    width: 31%;
+    width: 32%;
     padding: 30px;
     border-radius: 30px;
     text-align: right;
+    /* 컨텐츠 추가 */
+    width: 24%;
 }
 .aboutConWrap .item img{
     display: inline;
@@ -528,11 +530,18 @@ visibility: hidden;
         width: 90%;
     }
     .aboutConWrap .item{
-        width: 32%;
         padding: 2vw;
     }
     .aboutConWrap .item .tit,.serviceConWrap .item{
         font-size: clamp(18px, 1.5vw, 20px);
+    }
+    /* about item 4개 인 경우 스타일 */
+    .aboutConWrap{
+        flex-wrap: wrap;
+    }
+    .aboutConWrap .item{
+        width: 48%;
+        margin-bottom: 2vw;
     }
     
 }
@@ -611,12 +620,6 @@ visibility: hidden;
         max-height: 50vh;
         margin-bottom: 5vh;
     }
-    .aboutConWrap .item{
-        width: 49%;
-    }
-    .aboutConWrap .item img{
-        margin-bottom: 3vh;
-    }
     .section03 .inner{
         padding: 30px 0;
     }
@@ -636,6 +639,20 @@ visibility: hidden;
     }
     #footer .inner .address{
         flex-grow: 0;
+    }
+/* 
+    .aboutConWrap .item{
+        width: 49%;
+    }
+    .aboutConWrap .item img{
+        margin-bottom: 3vh;
+    } */
+    
+    /* about item 4개 인 경우 스타일 */
+    .aboutConWrap .item{
+        width: 100%;
+        padding: 5vw;
+        margin-bottom: 3vw;
     }
 }
 
